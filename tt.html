@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五天出國景點行程（含分類）</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 20px 15px 40px;
+    color: #2c3e50;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: #34495e;
+    margin-bottom: 35px;
+  }
+
+  /* Day Selector */
+  .day-selector {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    border-bottom: 3px solid #ddd;
+    margin-bottom: 25px;
+  }
+  .underline {
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    width: 0;
+    left: 0;
+  }
+  .day-button {
+    background: transparent;
+    border: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #5d6d7e;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+  }
+  .day-button:hover {
+    color: #2980b9;
+  }
+  .day-button.active {
+    color: #2980b9;
+    font-weight: 900;
+  }
+
+  /* Spot Selector */
+  .spot-selector {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: #2980b9 #e0e7ff;
+  }
+  .spot-button {
+    flex: 0 0 auto;
+    background: #ecf0f1;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+  }
+  .spot-button.active {
+    color: #fff;
+  }
+  .spot-button .tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+
+  /* 分類顏色 */
+  .tag-food {
+    background: #e67e22;
+    color: #fff;
+  }
+  .tag-spot {
+    background: #2980b9;
+    color: #fff;
+  }
+  .tag-shop {
+    background: #27ae60;
+    color: #fff;
+  }
+
+  /* Info container */
+  .info-container {
+    background: white;
+    padding: 30px 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .info-container svg.bg-decor {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    opacity: 0.1;
+  }
+  .info-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-tag {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+  .info-desc {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #4a5a6a;
+    margin-bottom: 15px;
+  }
+  .info-address {
+    font-style: italic;
+    font-size: 1rem;
+    color: #7f8c8d;
+    border-left: 4px solid #2980b9;
+    padding-left: 12px;
+  }
+
+  /* Image carousel */
+  .image-carousel {
+    position: relative;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.15);
+  }
+  .image-carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .carousel-btn {
+    background: rgba(41, 128, 185, 0.6);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .carousel-index {
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    background: rgba(41, 128, 185, 0.75);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 14px;
+  }
+
+  /* Review */
+  .review-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    padding: 25px;
+  }
+  .review-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .review-content {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    min-height: 80px;
+    margin-bottom: 10px;
+  }
+  .review-author {
+    font-weight: 700;
+    color: #2980b9;
+  }
+  .review-controls {
+    display: flex;
+    gap: 10px;
+  }
+  .review-btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+<h1>五天出國景點行程</h1>
+
+<nav class="day-selector"></nav>
+<div class="underline" id="underline"></div>
+
+<nav class="spot-selector"></nav>
+
+<section class="info-container"></section>
+
+<section class="review-section" hidden>
+  <h3 class="review-title">評論</h3>
+  <p class="review-content" id="reviewContent"></p>
+  <p class="review-author" id="reviewAuthor"></p>
+  <div class="review-controls">
+    <button class="review-btn" id="reviewPrev">&#8592;</button>
+    <button class="review-btn" id="reviewNext">&#8594;</button>
+  </div>
+</section>
+
+<script>
+  // 分類對應顏色 & 圖示
+  const categoryConfig = {
+    '美食': { class: 'tag-food', icon: '🍽️' },
+    '景點': { class: 'tag-spot', icon: '🏞️' },
+    '購物': { class: 'tag-shop', icon: '🛍️' }
+  };
+
+  const itinerary = [
+    {
+      day: 1,
+      spots: [
+        {
+          title: "台北101",
+          category: "景點",
+          description: "台北101是台灣著名地標，高樓觀景台能俯瞰整個台北市。",
+          address: "台北市信義區市府路45號",
+          images: [
+            "https://upload.wikimedia.org/wikipedia/commons/f/fd/Taipei_101_2016.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/9/95/Taipei_101_at_night.jpg"
+          ],
+          reviews: [
+            { author: "小明", content: "風景非常壯觀，值得一去！" },
+            { author: "小華", content: "附近商場餐廳很多，很方便。" }
+          ]
+        },
+        {
+          title: "鼎泰豐",
+          category: "美食",
+          description: "台灣經典小籠包餐廳，以精緻手工著稱。",
+          address: "台北市信義區信義路五段",
+          images: [
+            "https://upload.wikimedia.org/wikipedia/commons/f/f0/Din_Tai_Fung_Xiaolongbao.jpg"
+          ],
+          reviews: [
+            { author: "阿芳", content: "超好吃！服務也很棒。" }
+          ]
+        }
+      ]
+    },
+    {
+      day: 2,
+      spots: [
+        {
+          title: "九份老街",
+          category: "景點",
+          description: "九份以山城老街與美麗山景著稱，是台灣經典景點。",
+          address: "新北市瑞芳區九份",
+          images: [
+            "https://upload.wikimedia.org/wikipedia/commons/3/3a/Jiufen_old_street_%282%29.jpg"
+          ],
+          reviews: [
+            { author: "阿珍", content: "夜景絕美，食物好吃又多樣。" }
+          ]
+        },
+        {
+          title: "手信坊",
+          category: "購物",
+          description: "知名伴手禮商店，販售鳳梨酥與糕點。",
+          address: "新北市中和區景安路",
+          images: [
+            "https://upload.wikimedia.org/wikipedia/commons/3/36/Pineapple_cake_Taiwan.jpg"
+          ],
+          reviews: [
+            { author: "小強", content: "買了一堆送朋友，超方便！" }
+          ]
+        }
+      ]
+    }
+  ];
+
+  const daySelector = document.querySelector('.day-selector');
+  const underline = document.getElementById('underline');
+  const spotSelector = document.querySelector('.spot-selector');
+  const infoContainer = document.querySelector('.info-container');
+  const reviewSection = document.querySelector('.review-section');
+  const reviewContent = document.getElementById('reviewContent');
+  const reviewAuthor = document.getElementById('reviewAuthor');
+  const reviewPrev = document.getElementById('reviewPrev');
+  const reviewNext = document.getElementById('reviewNext');
+
+  let currentDayIndex = 0;
+  let currentSpotIndex = 0;
+  let currentImageIndex = 0;
+  let currentReviewIndex = 0;
+
+  function createDayButtons() {
+    itinerary.forEach((dayItem, i) => {
+      const btn = document.createElement('button');
+      btn.className = `day-button ${i === 0 ? 'active' : ''}`;
+      btn.textContent = `第${dayItem.day}天`;
+      btn.onclick = () => {
+        if (currentDayIndex !== i) switchDay(i);
+      };
+      daySelector.appendChild(btn);
+    });
+    setUnderlinePosition(0);
+  }
+
+  function createSpotButtons(dayIndex) {
+    spotSelector.innerHTML = '';
+    itinerary[dayIndex].spots.forEach((spot, i) => {
+      const btn = document.createElement('button');
+      btn.className = `spot-button ${i === 0 ? 'active' : ''}`;
+      const cfg = categoryConfig[spot.category];
+      btn.innerHTML = `<span>${spot.title}</span><span class="tag ${cfg.class}">${cfg.icon} ${spot.category}</span>`;
+      btn.onclick = () => switchSpot(i);
+      spotSelector.appendChild(btn);
+    });
+  }
+
+  function setUnderlinePosition(index) {
+    const buttons = document.querySelectorAll('.day-button');
+    const btn = buttons[index];
+    underline.style.width = btn.offsetWidth + 'px';
+    underline.style.left = btn.offsetLeft + 'px';
+  }
+
+  function switchDay(index) {
+    document.querySelectorAll('.day-button')[currentDayIndex].classList.remove('active');
+    document.querySelectorAll('.day-button')[index].classList.add('active');
+    currentDayIndex = index;
+    currentSpotIndex = 0;
+    currentImageIndex = 0;
+    currentReviewIndex = 0;
+    setUnderlinePosition(index);
+    createSpotButtons(index);
+    updateInfo();
+    updateReview();
+  }
+
+  function switchSpot(index) {
+    document.querySelectorAll('.spot-button')[currentSpotIndex].classList.remove('active');
+    document.querySelectorAll('.spot-button')[index].classList.add('active');
+    currentSpotIndex = index;
+    currentImageIndex = 0;
+    currentReviewIndex = 0;
+    updateInfo();
+    updateReview();
+  }
+
+  function updateInfo() {
+    const spot = itinerary[currentDayIndex].spots[currentSpotIndex];
+    const cfg = categoryConfig[spot.category];
+
+    infoContainer.innerHTML = `
+      <svg class="bg-decor" viewBox="0 0 100 100" fill="#2980b9"><circle cx="50" cy="50" r="50"/></svg>
+      <h2 class="info-title">${spot.title} 
+        <span class="info-tag ${cfg.class}">${cfg.icon} ${spot.category}</span>
+      </h2>
+      <p class="info-desc">${spot.description}</p>
+      <p class="info-address">${spot.address}</p>
+      <div class="image-carousel">
+        <img src="${spot.images[currentImageIndex]}">
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevImage">&#8592;</button>
+          <button class="carousel-btn" id="nextImage">&#8594;</button>
+        </div>
+        <div class="carousel-index">${currentImageIndex + 1} / ${spot.images.length}</div>
+      </div>
+    `;
+
+    document.getElementById('prevImage').onclick = () => {
+      currentImageIndex = (currentImageIndex - 1 + spot.images.length) % spot.images.length;
+      updateInfo();
+    };
+    document.getElementById('nextImage').onclick = () => {
+      currentImageIndex = (currentImageIndex + 1) % spot.images.length;
+      updateInfo();
+    };
+  }
+
+  function updateReview() {
+    const reviews = itinerary[currentDayIndex].spots[currentSpotIndex].reviews;
+    if (!reviews || reviews.length === 0) {
+      reviewSection.hidden = true;
+      return;
+    }
+    reviewSection.hidden = false;
+    const review = reviews[currentReviewIndex];
+    reviewContent.textContent = `"${review.content}"`;
+    reviewAuthor.textContent = `－ ${review.author}`;
+
+    reviewPrev.onclick = () => {
+      currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+      updateReview();
+    };
+    reviewNext.onclick = () => {
+      currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+      updateReview();
+    };
+  }
+
+  createDayButtons();
+  createSpotButtons(0);
+  updateInfo();
+  updateReview();
+  window.addEventListener('resize', () => setUnderlinePosition(currentDayIndex));
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0;
+  background: #f4f8fa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #4bb6b7, #339999);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  gap: 0.8rem;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tab-button {
+  flex: 1 1 30%;
+  padding: 0.6rem 0;
+  background: #eaf9fa;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.tab-button:hover {
+  background: #cdeef0;
+}
+
+.tab-button.active {
+  background: #4bb6b7;
+  color: white;
+}
+
+/* 行程 */
+.day-schedule {
+  display: none;
+  /*min-height: 120px;*/
+  height:150px;
+  overflow:auto;
+}
+
+.day-schedule.active {
+  display: block;
+}
+
+.itinerary-item {
+  background: #ffd27f;
+  padding: 0.8rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.itinerary-item:hover {
+  background: #ffbb55;
+}
+
+.itinerary-item svg {
+  flex-shrink: 0;
+}
+
+/* 景點資訊 */
+#place-info img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+#place-info h3 {
+  margin: 0.5rem 0;
+  color: #4bb6b7;
+  font-size: 1.1rem;
+}
+
+#place-info p {
+  line-height: 1.5;
+  color: #444;
+}
+
+.info-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.info-controls button {
+  background: #eaf9fa;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.info-controls button:hover {
+  background: #cdeef0;
+}
+
+.info-controls svg {
+  stroke: #4bb6b7;
+}
+.spot-button.active {
+    background-color: #8E8E8E;
+  }
+.spot-button {
+    flex: 0 0 auto;
+    background: #ecf0f1;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+  }
+  .spot-button .tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+/* 分類顏色 */
+  .tag-food {
+    background: #e67e22;
+    color: #fff;
+  }
+  .tag-spot {
+    background: #2980b9;
+    color: #fff;
+  }
+  .tag-shop {
+    background: #27ae60;
+    color: #fff;
+  }
+
+/* 地圖 */
+#map-placeholder {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#map-placeholder svg {
+  margin-bottom: 0.5rem;
+  stroke: #555;
+}
+
+/* footer */
+footer {
+  background: #4bb6b7;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* 💻 平板、桌機版佈局 */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .map {
+    grid-column: 1 / 3; /* 地圖全寬放在下方 */
+  }
+}

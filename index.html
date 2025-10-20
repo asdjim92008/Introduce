@@ -1,1 +1,71 @@
-test
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>五天旅遊行程規劃</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✈️ 我的五天旅遊行程</h1>
+    <p>切換天數，查看景點資訊與地圖</p>
+  </header>
+
+  <main>
+    <!-- 行程區 -->
+    <section class="itinerary">
+      <h2>📅 行程表</h2>
+      <div class="tabs">
+        <button class="tab-button active" data-day="1">第1天</button>
+        <button class="tab-button" data-day="2">第2天</button>
+        <button class="tab-button" data-day="3">第3天</button>
+        <button class="tab-button" data-day="4">第4天</button>
+        <button class="tab-button" data-day="5">第5天</button>
+      </div>
+
+      <div id="itinerary-container">
+        <div class="day-schedule active" data-day="1"></div>
+        <div class="day-schedule" data-day="2"></div>
+        <div class="day-schedule" data-day="3"></div>
+        <div class="day-schedule" data-day="4"></div>
+        <div class="day-schedule" data-day="5"></div>
+      </div>
+    </section>
+
+    <!-- 景點資訊區 -->
+    <section class="info">
+      <h2>📸 景點資訊</h2>
+      <div id="place-info">
+        <p>請點選行程中的景點以查看詳細資訊。</p>
+      </div>
+      <div class="info-controls">
+        <button id="prev-info" aria-label="上一則">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21l-7-7 7-7"/></svg>
+        </button>
+        <button id="next-info" aria-label="下一則">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 7l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- 地圖區 -->
+    <section class="map">
+      <h2>🗺️ 地圖</h2>
+      <div id="map-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="32" cy="32" r="30"/>
+          <path d="M32 12v20l10 10"/>
+        </svg>
+        <p>地圖顯示區（預留，可串接 Google Maps）</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 旅遊規劃網站 Demo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
