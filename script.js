@@ -169,11 +169,6 @@ function renderItinerary() {
       const category = categoryStyles[place.category] || { color: "#ccc", icon: "" };
       const item = document.createElement('div');
 	  item.className = 'spot-button';
-	  /*
-      item.className = 'itinerary-item';
-      item.style.background = category.color;
-      item.innerHTML = `${category.icon} ${place.name}`;
-	  */
 	  const cfg = categoryStyles[place.category];
 	  item.innerHTML = `<span>${place.name}</span><span class="tag ${cfg.class}">${cfg.icon} ${place.category}</span>`;
 
@@ -193,6 +188,10 @@ function renderItinerary() {
       schedule.appendChild(item);
     });
   });
+  if (daySchedules.length > 0) {
+      const firstSpotButton = daySchedules[0].querySelector('.spot-button');
+      firstSpotButton && firstSpotButton.click(); // 自動觸發第一個 spot-button 的點擊事件
+    }
 }
 
 // 顯示景點資訊
@@ -208,18 +207,29 @@ function showPlaceInfo() {
   mapFrame.src = currentPlace.map_location;
 }
 
+function changeInfo(){
+	if (!currentPlace) return;
+  const info = currentPlace.info[currentInfoIndex];
+  placeInfoEl.innerHTML = `
+    <img src="${info.img}" alt="${currentPlace.name}">
+    <h3>${currentPlace.name} <span style="font-size:0.8rem;color:#666;">(${currentPlace.category})</span></h3>
+    <p>${info.review}</p>
+    <p style="font-size:0.8rem;color:#888;">${currentInfoIndex + 1} / ${currentPlace.info.length}</p>
+  `;
+}
+
 // 切換資訊
 prevInfoBtn.addEventListener('click', () => {
   if (currentPlace) {
     currentInfoIndex = (currentInfoIndex - 1 + currentPlace.info.length) % currentPlace.info.length;
-    showPlaceInfo();
+    changeInfo();
   }
 });
 
 nextInfoBtn.addEventListener('click', () => {
   if (currentPlace) {
     currentInfoIndex = (currentInfoIndex + 1) % currentPlace.info.length;
-    showPlaceInfo();
+    changeInfo();
   }
 });
 
