@@ -4,6 +4,82 @@ const itineraryData = {
     {
       name: "台北101",
       category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      info: [
+        { 
+			img: "ttt.png", 
+			review: "壯觀的地標建築，觀景台視野極佳。" 
+		},
+        { 
+			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
+			review: "建築夜景非常壯麗。" 
+		}
+      ]
+    },
+	{
+      name: "台北101",
+      category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      info: [
+        { 
+			img: "ttt.png", 
+			review: "壯觀的地標建築，觀景台視野極佳。" 
+		},
+        { 
+			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
+			review: "建築夜景非常壯麗。" 
+		}
+      ]
+    },
+	{
+      name: "台北101",
+      category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      info: [
+        { 
+			img: "ttt.png", 
+			review: "壯觀的地標建築，觀景台視野極佳。" 
+		},
+        { 
+			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
+			review: "建築夜景非常壯麗。" 
+		}
+      ]
+    },
+	{
+      name: "台北101",
+      category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      info: [
+        { 
+			img: "ttt.png", 
+			review: "壯觀的地標建築，觀景台視野極佳。" 
+		},
+        { 
+			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
+			review: "建築夜景非常壯麗。" 
+		}
+      ]
+    },
+	{
+      name: "台北101",
+      category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      info: [
+        { 
+			img: "ttt.png", 
+			review: "壯觀的地標建築，觀景台視野極佳。" 
+		},
+        { 
+			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
+			review: "建築夜景非常壯麗。" 
+		}
+      ]
+    },
+	{
+      name: "台北101",
+      category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
       info: [
         { 
 			img: "ttt.png", 
@@ -18,6 +94,7 @@ const itineraryData = {
     {
       name: "鼎泰豐",
       category: "美食",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
       info: [
         { 
 			img: "https://upload.wikimedia.org/wikipedia/commons/2/28/Din_Tai_Fung.jpg", 
@@ -30,6 +107,7 @@ const itineraryData = {
     {
       name: "中正紀念堂",
       category: "景點",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
       info: [
         { 
 			img: "https://upload.wikimedia.org/wikipedia/commons/1/16/Chiang_Kai-shek_Memorial_Hall_2008.jpg", 
@@ -40,6 +118,7 @@ const itineraryData = {
     {
       name: "西門町",
       category: "購物",
+	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
       info: [
         { 
 			img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ximending_at_night.jpg", 
@@ -75,6 +154,7 @@ const daySchedules = document.querySelectorAll('.day-schedule');
 const placeInfoEl = document.getElementById('place-info');
 const prevInfoBtn = document.getElementById('prev-info');
 const nextInfoBtn = document.getElementById('next-info');
+const mapFrame = document.getElementById('mapFrame');
 
 let currentPlace = null;
 let currentInfoIndex = 0;
@@ -125,6 +205,7 @@ function showPlaceInfo() {
     <p>${info.review}</p>
     <p style="font-size:0.8rem;color:#888;">${currentInfoIndex + 1} / ${currentPlace.info.length}</p>
   `;
+  mapFrame.src = currentPlace.map_location;
 }
 
 // 切換資訊
