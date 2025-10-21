@@ -1,0 +1,30 @@
+name: Auto Cache Busting
+
+on:
+  push:
+    branches:
+      - main   # 你也可以改成你部署 GitHub Pages 的分支
+
+jobs:
+  cache-busting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set version variable
+        id: vars
+        run: echo "VERSION=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
+      - name: Replace version tag in HTML
+        run: |
+          sed -i "s/{{VERSION}}/${VERSION}/g" index.html
+
+      - name: Commit updated HTML
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "🔁 Update cache busting version ${VERSION}" || echo "No changes to commit"
+          git push
