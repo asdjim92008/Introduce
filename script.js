@@ -2,17 +2,25 @@
 const itineraryData = {
   1: [
     {
-      name: "台北101",
-      category: "景點",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      name: "肉蛋飯糰",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6020.424447080302!2d127.64619103042679!3d26.204295974549215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569b79929e9c5%3A0x97508c627485ac4a!2z54-A5aGU55GqIOmCo-mcuOapn-WgtOWci-WFp-e3muWIsOmBlOWkp-W7s-W6lw!5e0!3m2!1szh-TW!2stw!4v1761056553806!5m2!1szh-TW!2stw",
       info: [
-        { 
-			img: "ttt.png", 
-			review: "壯觀的地標建築，觀景台視野極佳。" 
+		{ 
+			img: "t1menu.jpg", 
+			review: "菜單" 
+		},
+		{ 
+			img: "t1p1.jpg", 
+			review: "這次品嚐國內線的分店，需要排隊半小時左右，最好吃的是山苦瓜口味，接著是招牌口味，整體來說搭配午餐肉是好吃的，但價格偏貴" 
 		},
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
-			review: "建築夜景非常壯麗。" 
+			img: "t1p2.jpg", 
+			review: "在做沖繩旅遊功課的時候，很多人推薦的那霸機場必吃「豬肉蛋飯糰 pork tamago onigiri」，還好我一早8：30要在那霸機場坐OTS的接駁車，所以可以先來嚐鮮一番，而且也不用排隊~<br>口味還算不錯，份量也適中，但是也不能算是必吃美食~<br>應該說是吃一種儀式感，有來吃過才能算來過那霸機場吧😁" 
+		},
+        { 
+			img: "t1p3.jpg", 
+			review: "那霸機場（Naha Airport）<br>9:20抵達，出關後前往國內線找吃的...<br>排隊點餐到取餐，大概只花了15分鐘，蠻快的。<br>飯團真的好好吃，苦瓜天婦羅口味超級好吃....<br>均銷約600-650日元" 
 		}
       ]
     },
