@@ -64,7 +64,7 @@ section {
 .day-schedule {
   display: none;
   /*min-height: 120px;*/
-  height:150px;
+  height:200px;
   overflow:auto;
 }
 
