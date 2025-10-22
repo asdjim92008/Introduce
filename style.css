@@ -63,8 +63,7 @@ section {
 /* 行程 */
 .day-schedule {
   display: none;
-  /*min-height: 120px;*/
-  height:200px;
+  height:210px;
   overflow:auto;
 }
 
@@ -92,12 +91,22 @@ section {
 .itinerary-item svg {
   flex-shrink: 0;
 }
+#place-info{
+  height: 300px; /* 或依手機版大小調整 */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+}
 
 /* 景點資訊 */
 #place-info img {
-  height:256px;
-  width:342px;
-  /*max-width: 100%;*/
+  /*height:256px;
+  width:342px;*/
+  max-height:180px;
+  max-width: 100%;
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
@@ -216,4 +225,35 @@ footer {
   .map {
     grid-column: 1 / 3; /* 地圖全寬放在下方 */
   }
+}
+/* 🔍 放大圖層樣式 */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* 關閉按鈕 */
+.image-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
 }

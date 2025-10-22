@@ -16,11 +16,11 @@ const itineraryData = {
 		},
         { 
 			img: "t1p2.jpg", 
-			review: "在做沖繩旅遊功課的時候，很多人推薦的那霸機場必吃「豬肉蛋飯糰 pork tamago onigiri」，還好我一早8：30要在那霸機場坐OTS的接駁車，所以可以先來嚐鮮一番，而且也不用排隊~<br>口味還算不錯，份量也適中，但是也不能算是必吃美食~<br>應該說是吃一種儀式感，有來吃過才能算來過那霸機場吧😁" 
+			review: "在做沖繩旅遊功課的時候，很多人推薦的那霸機場必吃「豬肉蛋飯糰 pork tamago onigiri」，還好我一早8：30要在那霸機場坐OTS的接駁車，所以可以先來嚐鮮一番，而且也不用排隊~口味還算不錯，份量也適中，但是也不能算是必吃美食~應該說是吃一種儀式感，有來吃過才能算來過那霸機場吧😁" 
 		},
         { 
 			img: "t1p3.jpg", 
-			review: "那霸機場（Naha Airport）<br>9:20抵達，出關後前往國內線找吃的...<br>排隊點餐到取餐，大概只花了15分鐘，蠻快的。<br>飯團真的好好吃，苦瓜天婦羅口味超級好吃....<br>均銷約600-650日元" 
+			review: "那霸機場（Naha Airport）9:20抵達，出關後前往國內線找吃的...排隊點餐到取餐，大概只花了15分鐘，蠻快的。飯團真的好好吃，苦瓜天婦羅口味超級好吃....均銷約600-650日元" 
 		}
       ]
     },
@@ -200,6 +200,26 @@ function renderItinerary() {
       const firstSpotButton = daySchedules[0].querySelector('.spot-button');
       firstSpotButton && firstSpotButton.click(); // 自動觸發第一個 spot-button 的點擊事件
     }
+  // 點擊評論圖片 → 顯示放大圖層
+	document.addEventListener('click', function (e) {
+	  if (e.target.tagName === 'IMG' && e.target.closest('#place-info')) {
+		const modal = document.getElementById('image-modal');
+		const modalImg = document.getElementById('modal-img');
+		modal.style.display = 'flex';
+		modalImg.src = e.target.src;
+	  }
+	});
+
+	// 點擊關閉或圖層 → 關閉放大圖層
+	document.querySelector('.image-modal .close-btn').addEventListener('click', () => {
+	  document.getElementById('image-modal').style.display = 'none';
+	});
+
+	document.getElementById('image-modal').addEventListener('click', (e) => {
+	  if (e.target.id === 'image-modal') {
+		document.getElementById('image-modal').style.display = 'none';
+	  }
+	});
 }
 
 // 顯示景點資訊
@@ -224,6 +244,7 @@ function changeInfo(){
     <p>${info.review}</p>
     <p style="font-size:0.8rem;color:#888;">${currentInfoIndex + 1} / ${currentPlace.info.length}</p>
   `;
+  
 }
 
 // 切換資訊
