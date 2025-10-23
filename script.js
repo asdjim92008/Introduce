@@ -25,18 +25,26 @@ const itineraryData = {
       ]
     },
 	{
-      name: "台北101",
+      name: "住宿ホテルトーマス牧志",
       category: "景點",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.7101187135447!2d127.69089730858086!3d26.217428059682504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697b3ae7241d%3A0x2f2434c1d31cb98!2zQW5uZXNzbyDniaflv5flhazlr5PlvI_po6_lupc!5e0!3m2!1szh-TW!2stw!4v1761230683165!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "ttt.png", 
-			review: "壯觀的地標建築，觀景台視野極佳。" 
+			img: "day1/t2p1.png", 
+			review: "" 
 		},
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
-			review: "建築夜景非常壯麗。" 
-		}
+			img: "day1/t2p2.png", 
+			review: "" 
+		},
+		{ 
+			img: "day1/t2p3.png", 
+			review: "" 
+		},
+		{ 
+			img: "day1/t2p4.png", 
+			review: "" 
+		},
       ]
     },
 	{
@@ -347,4 +355,5 @@ tabButtons.forEach(btn => {
 });
 
 // 初始化
+
 window.addEventListener('DOMContentLoaded', renderItinerary);
