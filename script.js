@@ -53,13 +53,9 @@ const itineraryData = {
 	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.432073672106!2d127.68217007524659!3d26.215146877069834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697751412f31%3A0x8d6939f65e915e02!2zS29rdXNhaS1kb3JpLCBOYWhhLCBPa2luYXdhLCDml6XmnKw!5e0!3m2!1szh-TW!2stw!4v1761362904216!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "ttt.png", 
-			review: "壯觀的地標建築，觀景台視野極佳。" 
+			img: "day1/t3p1.png", 
+			review: "選擇旅行最後兩晚住在距離國際通五分鐘，真的是非常讚的計劃！可以買好買滿" 
 		},
-        { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Taipei_101_2022.jpg", 
-			review: "建築夜景非常壯麗。" 
-		}
       ]
     },
 	{
@@ -126,76 +122,307 @@ const itineraryData = {
 			review: "拿完租車剛好就在糸滿附近，我們就決定來糸滿魚市場吃午餐。這裡最大特色就是可以自己組合海鮮丼飯：先買一碗白飯，再到各間海鮮廍挑自己喜歡的漁獲，一碗獨一無二的海鮮丼就完成了！" 
 		}
       ]
+	},
+	{
+      name: "波上宮神社",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.260102744547!2d127.66852627524693!3d26.220736877066464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56985510a3f75%3A0x776a51e1e15524ac!2z5rOi5LiK5a6u!5e0!3m2!1szh-TW!2stw!4v1761389900798!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day2/t4p1.png", 
+			review: "波上宮是位於沖繩縣那霸市的著名神社" 
+		}
+      ]
+    },
+    {
+      name: "瀨長島",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.6151516825234!2d127.63786177524536!3d26.17666027709353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5681e893b714d%3A0xa5360835fe2d83b8!2z54Co6ZW35bO2!5e0!3m2!1szh-TW!2stw!4v1761390057934!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day2/t5p1.png", 
+			review: "看飛機降落及夕陽的好地方，山坡上的洋式房舍聚集了多樣餐飲....是久坐觀海景的好地方。不過若好天氣太熱曬傷機率很高，停車位也不多....." 
+		}
+      ]
+	},
+	{
+      name: "塔可飯",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1448.3047431644723!2d127.63970045074262!3d26.175734604058096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56819319ade33%3A0x935fa83d7869a833!2sTaco%20Rice%20Cafe%20Kijimuna!5e0!3m2!1szh-TW!2stw!4v1761390332918!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day2/t6p1.png", 
+			review: "第一次吃塔可飯，好吃！小孩也很愛，指名下次來瀨長島還要吃這間。服務人員英文很好也很友善。" 
+		}
+      ]
     }
   ],
   3: [
     {
-      name: "中正紀念堂",
+      name: "沖繩水族館",
       category: "景點",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.5666710448672!2d127.87543817526377!3d26.694337976778083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e4fa3152619e3d%3A0xea08a6700fdd9ffe!2z5rKW57mp576O6bqX5rW35rC05peP6aSo!5e0!3m2!1szh-TW!2stw!4v1761390531424!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/1/16/Chiang_Kai-shek_Memorial_Hall_2008.jpg", 
-			review: "充滿歷史氛圍的建築。" 
+			img: "day3/t1p1.png", 
+			review: "沖繩最大的水族館，擁有超巨大鯨鯊可以在全展望的水族缸前觀看。因為三面的水族缸是互通的，所以可以選擇其中一面靜靜地坐著" 
 		}
       ]
     },
     {
-      name: "西門町",
-      category: "購物",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      name: "Shinmei Coffee",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.079906376552!2d127.96890537526323!3d26.677926776787903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e4f93f21d32467%3A0x2ec7ebee84f500a1!2sShinmei%20Coffee%20(Sinmay%20Coffee%20Okinawa)!5e0!3m2!1szh-TW!2stw!4v1761390710057!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ximending_at_night.jpg", 
-			review: "熱鬧的商圈，非常好逛。" 
+			img: "day3/t2p1.png", 
+			review: "三杯現刨黑糖拿鐵，其中一杯去冰，一杯黑糖鮮奶，在日本去冰會少一大口，取飲料處寫了一句話，就是先喝一口現刨純黑糖，真的好喝，覺得來不後悔，很值得，有蠻大停車場，不用擔心不好停" 
 		}
       ]
-    }
+    },
+	{
+      name: "古宇利島",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8993.680829945779!2d128.01457867178988!3d26.700585111993533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e45834628fc6c1%3A0xfe464c1009cf4372!2z5Y-k5a6H5Yip5bO2!5e0!3m2!1szh-TW!2stw!4v1761390913884!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day3/t3p1.png", 
+			review: "這是讓人心曠神怡的一處景點，沖繩美麗海域的顏色，真的令人感動難忘！似乎永遠看不膩的海景。光是坐在塔頂，鳥瞰各種顏色的海水及古宇利大橋，這種自然風景的魅力往往更能深刻在腦中。" 
+		}
+      ]
+    },
+	{
+      name: "古利宇島蝦蝦飯",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.4856284406555!2d128.01803187727245!3d26.696928538445853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e459cce077ea71%3A0x681dbc4657cd58e5!2z5Y-k5a6H5Yip6J2m6J2m6aOv!5e0!3m2!1szh-TW!2stw!4v1761391112063!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day3/t4p1.png", 
+			review: "沖繩很著名的蝦蝦飯，很多人都推介，要特地去試一試，門口附近有兩個停車場，但是位置很少，兜了幾個圈都找不到位置，唯有停在下面的停車場，要再走樓梯和斜坡上去。餐廳有兩層，下面一層付錢，上面一層取餐和用餐，還有天台也可以用餐，一邊看風景一邊用餐，看起來很多人，門口寫着要等25分鐘。付錢點餐是不用等的" 
+		}
+      ]
+    },
+	{
+      name: "萬座毛",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.4628302215797!2d127.84790317525682!3d26.505235276892417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e503788741a7f9%3A0xdfec3d6fcce75918!2z6JCs5bqn5q-b!5e0!3m2!1szh-TW!2stw!4v1761391310784!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day3/t5p1.png", 
+			review: "雖然設施簡單，但步道與草皮維護非常乾淨，且票價非常便宜煩，很適合當作下午接近落日時穿插的景點，絕對物超所值。" 
+		}
+      ]
+    },
   ],
   4: [
     {
-      name: "中正紀念堂",
+      name: "殘波岬",
       category: "景點",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14289.777726331156!2d127.70345705190951!3d26.44139948089636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51748859d2995%3A0x3d7290783e1f3ca1!2sCape%20Zanpa!5e0!3m2!1szh-TW!2stw!4v1761391506517!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/1/16/Chiang_Kai-shek_Memorial_Hall_2008.jpg", 
-			review: "充滿歷史氛圍的建築。" 
+			img: "day4/t1p1.png", 
+			review: "在沖繩本島讀谷村西端的Cape Zanpa，是一處面向東海的海角，擁有筆直高聳的斷崖與遼闊無邊的海天景色。從入口步行進入，一條被海風雕塑的步道蜿蜒通往崖邊，沿途野草與灌木緊貼著岩石生長" 
 		}
       ]
     },
     {
-      name: "西門町",
+      name: "美國村",
       category: "購物",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.329442300002!2d127.75170162525018!3d26.31582982700791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5130508159acd%3A0x1bde7c8b1d9e8bcc!2z576O5ZyL5p2R!5e0!3m2!1szh-TW!2stw!4v1761391737764!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ximending_at_night.jpg", 
-			review: "熱鬧的商圈，非常好逛。" 
+			img: "day4/t2p1.png", 
+			review: "停車方便，日曬爆熱，但滿滿異國渡假風，各家小店特色滿滿，餐飲也都很不錯，是個渡假散漫的黃金地點" 
+		}
+      ]
+    },
+	  {
+      name: "美國村",
+      category: "購物",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.329442300002!2d127.75170162525018!3d26.31582982700791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5130508159acd%3A0x1bde7c8b1d9e8bcc!2z576O5ZyL5p2R!5e0!3m2!1szh-TW!2stw!4v1761391737764!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day4/t2p1.png", 
+			review: "停車方便，日曬爆熱，但滿滿異國渡假風，各家小店特色滿滿，餐飲也都很不錯，是個渡假散漫的黃金地點" 
+		}
+      ]
+    },
+	  {
+      name: "知念岬公園",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.9014638430403!2d127.826349375245!3d26.1673383770993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e571c075f81319%3A0x62ca88383fbffcd9!2z55-l5b-15bKs5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1761391915885!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day4/t3p1.png", 
+			review: "這裡只是一片空地沒有任何遊樂設施，但在晴朗好天氣的日子裡，您可以充分享受蔚藍的天空和蔚藍翠綠的大海，一望無際的藍天和碧海真的會美得令人難以置信" 
+		}
+      ]
+    },
+	  {
+      name: "租車公司",
+      category: "景點",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.183321992186!2d127.65269597524475!3d26.158158477105005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5680bd9f5f353%3A0x8b627c38946cc891!2s1-1174%20Toyosaki%2C%20Tomigusuku%2C%20Okinawa%20901-0225%E6%97%A5%E6%9C%AC!5e0!3m2!1szh-TW!2stw!4v1761392066152!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day4/t4p1.png", 
+			review: "還車" 
 		}
       ]
     }
   ],
   5: [
     {
-      name: "中正紀念堂",
-      category: "景點",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      name: "大衆串揚げ酒場 足立屋",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3579.479006804661!2d127.6885174!3d26.2136211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569709276b0f9%3A0x4352d94dbf1ac30!2sAdachiya!5e0!3m2!1szh-TW!2stw!4v1761392232008!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/1/16/Chiang_Kai-shek_Memorial_Hall_2008.jpg", 
-			review: "充滿歷史氛圍的建築。" 
+			img: "day5/t1p1.png", 
+			review: "吃的" 
 		}
       ]
     },
     {
-      name: "西門町",
-      category: "購物",
-	  map_location:"https://www.google.com/maps?q=25.033968,121.564468&z=16&output=embed",
+      name: "焼肉ここから 那覇久茂地店",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28634.62015454465!2d127.6768358!3d26.2185456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56978beb85c61%3A0x2edce9f4c2b64448!2sYakinikukokokara%20Nahakumojiten!5e0!3m2!1szh-TW!2stw!4v1761392348382!5m2!1szh-TW!2stw",
       info: [
         { 
-			img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ximending_at_night.jpg", 
-			review: "熱鬧的商圈，非常好逛。" 
+			img: "day5/t2p1.png", 
+			review: "吃的" 
+		}
+      ]
+	},
+	  {
+      name: "暖暮拉麵 那霸牧志店",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3483990608834!2d127.6873312!3d26.217866899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697bcfbeaaab%3A0x860befe404def6ef!2z5pqW5pqu5ouJ6bq1IOmCo-mcuOeJp-W_l-W6lw!5e0!3m2!1szh-TW!2stw!4v1761392516189!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t3p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Mahoroba Irori Okinawa",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28636.437002358252!2d127.682517!3d26.2111626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bb2af0ba64d%3A0xc5ff7b8159fe3fe2!2sMahoroba%20Irori%20Okinawa!5e0!3m2!1szh-TW!2stw!4v1761392572906!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/ttp1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "風獅爺雞蛋糕 MIA",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.4067624612503!2d127.69096169999999!3d26.215969700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5690044cbe4a1%3A0x94758466c57f54c7!2z6aKo542F54i66Zue6JuL57OVIE1JQQ!5e0!3m2!1szh-TW!2stw!4v1761392911499!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t4p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "傑克牛排館",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3579.5242310525737!2d127.6732888!3d26.2121508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56999b06c66db%3A0x5a84f40a1e58fcf7!2z5YKR5YWL54mb5o6S6aSo!5e0!3m2!1szh-TW!2stw!4v1761393041255!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t5p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Fluffy Coconut",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57217.90755628151!2d127.7993749!3d26.3226387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5110b4f027383%3A0x4c0b3117c356205f!2sFluffy%20Coconut!5e0!3m2!1szh-TW!2stw!4v1761393169803!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t6p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "OKINAWA TEA STAND -Sunpin",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3579.448480719715!2d127.6876851!3d26.2146135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569e8c02d725d%3A0x67f5f4bad441096c!2sOKINAWA%20TEA%20STAND%20-Sunpin-!5e0!3m2!1szh-TW!2stw!4v1761393286853!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t7p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Mediterranean grill OCTO",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28516.902285104694!2d127.9958182!3d26.6928638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e459551bf3d919%3A0xc593d1b93ba36247!2sMediterranean%20grill%20OCTO!5e0!3m2!1szh-TW!2stw!4v1761393525558!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t8p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "百年古家 大家 阿古豬",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d114121.52834965593!2d127.8913176!3d26.6389472!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e4ff4cb9b910f1%3A0x6c5682a23a94e475!2z55m-5bm05Y-k5a62IOWkp-WutiDpmL_lj6Tosaw!5e0!3m2!1szh-TW!2stw!4v1761393605393!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t9p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Buchi Kumojiten",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7158.850900203889!2d127.678335!3d26.2153622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56977dac0c9cd%3A0xa9b836cde5e24546!2sBuchi%20Kumojiten!5e0!3m2!1szh-TW!2stw!4v1761393684462!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t10p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Ocean View Dining T-ReIve 古宇利島",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3564.3661654378766!2d128.0077061!3d26.7007468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e45906039a5a9b%3A0x3da65cfe8f9300e5!2zT2NlYW4gVmlldyBEaW5pbmcgVC1SZUl2ZSDlj6TlrofliKnls7Y!5e0!3m2!1szh-TW!2stw!4v1761393758641!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t11p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "Steak Matsuya",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.4385973466183!2d127.6904876!3d26.214934799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569ff0e5915e1%3A0x79e02648ff426e44!2sSteak%20Matsuya!5e0!3m2!1szh-TW!2stw!4v1761393839470!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t12p1.png", 
+			review: "吃的" 
+		}
+      ]
+    },
+	  {
+      name: "hoppepan",
+      category: "美食",
+	  map_location:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3578.7749451281516!2d127.7032204!3d26.2365012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56ba8e635f46f%3A0x84b4d2a52c73c37!2shoppepan!5e0!3m2!1szh-TW!2stw!4v1761393913062!5m2!1szh-TW!2stw",
+      info: [
+        { 
+			img: "day5/t13p1.png", 
+			review: "吃的" 
 		}
       ]
     }
@@ -342,4 +569,5 @@ tabButtons.forEach(btn => {
 // 初始化
 
 window.addEventListener('DOMContentLoaded', renderItinerary);
+
 
